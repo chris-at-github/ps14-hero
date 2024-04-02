@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps14\Modulor\DataProcessing;
+namespace Ps14\Hero\DataProcessing;
 
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;

@@ -1,7 +1,7 @@
 {
-	"name": "ps14/modulor",
+	"name": "ps14/hero",
 	"type": "typo3-cms-extension",
-	"description": "TYPO3 Extension serves as a template for TYPO3 modules",
+	"description": "The TYPO3 extension provides two hero modules: one for hero images or videos and another for hero images displayed as a slider",
 	"keywords": [
 		"TYPO3",
 		"extension"
@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Ps14\\Modulor\\": "Classes"
+			"Ps14\\Hero\\": "Classes"
 		}
 	},
 	"license": "closed",
@@ -26,7 +26,7 @@
 	],
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "ps14_modulor"
+			"extension-key": "ps14_hero"
 		}
 	}
 }
