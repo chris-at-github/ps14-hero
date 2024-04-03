@@ -3,14 +3,23 @@ mod.wizards.newContentElement.wizardItems {
 		elements {
 			ps14_hero {
 				iconIdentifier = ps14-module-hero
-				title = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:title
-				description = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:description
+				title = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero.title
+				description = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero.description
 				tt_content_defValues {
 					CType = ps14_hero
 				}
 			}
+
+			ps14_hero_slider {
+				iconIdentifier = ps14-module-hero
+				title = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero-slider.title
+				description = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero-slider.description
+				tt_content_defValues {
+					CType = ps14_hero_slider
+				}
+			}
 		}
 
-		show := addToList(ps14_hero)
+		show := addToList(ps14_hero, ps14_hero_slider)
 	}
 }

@@ -4,12 +4,22 @@
 // Modul in TYPO3 tt_content registrieren
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
 	array(
-		'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:title',
+		'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero.title',
 		'ps14_hero',
 		'ps14-module-hero'
 	),
 	'CType',
 	'ps14_hero'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+	array(
+		'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:hero-slider.title',
+		'ps14_hero_slider',
+		'ps14-module-hero'
+	),
+	'CType',
+	'ps14_hero_slider'
 );
 
 // ---------------------------------------------------------------------------------------------------------------------

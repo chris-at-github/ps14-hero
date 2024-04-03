@@ -3,15 +3,18 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2024-03-25T23:00:00Z" product-name="ps14_hero" target-language="de">
 		<header/>
 		<body>
-			<trans-unit id="title">
+			<trans-unit id="hero.title">
 				<target>Ps14 Hero</target>
 			</trans-unit>
-			<trans-unit id="description">
-				<target>TYPO3 Extension serves as a template for TYPO3 modules</target>
+			<trans-unit id="hero.description">
+				<target>Hero Modul zur Anzeige von Bildern oder Videos.</target>
 			</trans-unit>
 
-			<trans-unit id="elements.record-type.default">
-				<target>Default</target>
+			<trans-unit id="hero-slider.title">
+				<target>Ps14 Hero Slider</target>
+			</trans-unit>
+			<trans-unit id="hero-slider.description">
+				<target>Hero Modul mit Funktionen für die Anzeige von Bildern als Slider</target>
 			</trans-unit>
 		</body>
 	</file>
