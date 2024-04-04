@@ -1,9 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
+	<f:section name="Header" />
 	<f:section name="Main">
-		<f:render section="Bodytext" arguments="{_all}" />
-		<f:render section="Images" arguments="{_all}" />
-		<f:render section="Elements" arguments="{_all}" />
+		<f:render partial="Hero/Item/Main" section="Main" arguments="{
+			header: data.header,
+			headerLayout: data.header_layout,
+			text: data.bodytext,
+			media: images.0,
+			settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images\')}'
+		}" />
 	</f:section>
 
 	<f:section name="Bodytext">
@@ -19,7 +24,7 @@
 					<li>
 						<f:render partial="Media/Type/Image" section="Main" arguments="{
 							file: image,
-							settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images.main\')}'
+							settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images\')}'
 						}" />
 					</li>
 				</f:for>

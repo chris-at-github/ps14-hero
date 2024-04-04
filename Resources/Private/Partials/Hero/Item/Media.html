@@ -1,0 +1,69 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		{media.extension -> xo:format.toLower()}
+		<f:debug>{media}</f:debug>
+		<f:if condition="{media.extension -> xo:format.toLower()} == 'svg'">
+			<f:then>
+				<f:render section="Svg" arguments="{_all}" />
+			</f:then>
+			<f:else if="{media.extension -> xo:format.toLower()} == 'mp4'">
+				<f:render section="Video" arguments="{_all}" />
+			</f:else>
+			<f:else>
+				<f:render section="Background" arguments="{_all}" />
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Svg">
+		<xo:svg.inline source="{media.publicUrl}" attributes="{'class': 'hero--background'}" />
+	</f:section>
+
+	<f:section name="Video">
+		<f:render partial="Components/Media" section="Video" arguments="{
+				file: media,
+				additionalAttributes: {
+					id: 'hero-video-{identifier -> xo:format.trim()}'
+				},
+				options: {
+					autoplay: 1,
+					controls: 0,
+					loop: 1
+				}
+			}" />
+
+		<button class="hero--video-control-play" aria-controls="hero-video-{identifier -> xo:format.trim()}" aria-label="{f:translate(key: 'LLL:EXT:ce_hero/Resources/Private/Language/locallang_frontend.xlf:video.controlPlay')}">
+			<xo:svg.inline attributes="{class: 'hero--video-control-play-default'}" source="assets/svg/play.svg" />
+			<xo:svg.inline attributes="{class: 'hero--video-control-play-large'}" source="assets/svg/play-large.svg" />
+			<xo:svg.inline attributes="{class: 'hero--video-control-pause-default'}" source="assets/svg/pause.svg" />
+			<xo:svg.inline attributes="{class: 'hero--video-control-pause-large'}" source="assets/svg/pause-large.svg" />
+		</button>
+	</f:section>
+
+	<f:section name="Background">
+		<f:variable name="heroBackground">
+			.hero-{identifier -> xo:format.trim()} {
+				background-image: url('{f:uri.image(image: media, cropVariant: "mobile", maxWidth: 900)}');
+			}
+
+			@media (min-width: 768px) {
+				.hero-{identifier -> xo:format.trim()} {
+					background-image: url('{f:uri.image(image: media, cropVariant: "desktop", maxWidth: 1800)}');
+				}
+			}
+		</f:variable>
+
+		<xo:css.inlineCode name="hero-{identifier -> xo:format.trim()}" code="{heroBackground}" />
+	</f:section>
+
+	<f:section name="Image">
+		<f:render partial="Components/Media" section="Picture" arguments="{
+				file: media,
+				image: {
+					width: settings.width,
+					cropVariant: settings.cropVariant
+				},
+				sizes: settings.mediaQueries
+			}" />
+	</f:section>
+</html>
