@@ -29,7 +29,7 @@
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['showitem'] = \Ps14\Site\Service\TcaService::getShowitem(
 	['general', 'appearance', 'language', 'access', 'categories', 'notes', 'extended'],
 	[
-		'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, bodytext, image, tx_foundation_elements,'
+		'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, bodytext, image,'
 	]
 );
 
@@ -42,17 +42,13 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['bodytex
 // Crop-Varianten fuer Image-Feld
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Ps14\Site\Service\TcaService::getCropVariants(
 	[
-		'thumbnail' => [
-			'allowedAspectRatios' => ['16_9', '4_3'],
+		'default' => [
+			'allowedAspectRatios' => ['16_9'],
 			'selectedRatio' => '16_9'
 		],
-		'fullsize' => [
-			'allowedAspectRatios' => ['21_9', 'NaN'],
-			'selectedRatio' => '21_9'
-		]
 	]
 );
-
+/*
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements TCA anpassen
 
@@ -98,3 +94,4 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['tx_foun
 		],
 	]
 );
+*/
