@@ -5,7 +5,7 @@ TYPO3 Extension die zwei Hero Module bereitstellt:
 
 ## Todos
 - [x] Frontend-Ausgabe von Hero finalisieren
-- [ ] Testen mit Video
+- [x] Testen mit Video
 - [x] Umbenennung Type/Image in Type/Media
 - [ ] Ausarbeitung Slider
 - [x] Header in Item mit korrekter Klasse versehen (Übergabe-Parameter)
