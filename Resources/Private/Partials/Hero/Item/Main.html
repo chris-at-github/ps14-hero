@@ -3,11 +3,7 @@
 	<f:section name="Main">
 		<div class="hero">
 			<f:render partial="Hero/Item/Content" section="Main" arguments="{_all}" />
-			<f:render partial="Media/Main" section="Rendering" arguments="{
-				file: media,
-				settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images\')}',
-				cssClass: 'hero__media'
-			}" />
+			<f:render partial="Hero/Item/Media" section="Main" arguments="{_all}" />
 		</div>
 	</f:section>
 </html>
