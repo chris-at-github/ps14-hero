@@ -39,6 +39,18 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['bodytex
 	'richtextConfiguration' => 'ps14Default',
 ];
 
+// Videos ebenfalls zulassen
+$GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['image'] = [
+	'label' => 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_tca.xlf:tt_content.media',
+	'config' => [
+		'allowed' => 'jpg, jpeg, png, svg ,mp4, ogg, flac, opus, webm',
+		'appearance' => [
+			'fileUploadAllowed' => false,
+			'createNewRelationLinkTitle' => 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_tca.xlf:tt_content.media.add-file-reference'
+		],
+	]
+];
+
 // Crop-Varianten fuer Image-Feld
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Ps14\Site\Service\TcaService::getCropVariants(
 	[
