@@ -23,3 +23,13 @@ mod.wizards.newContentElement.wizardItems {
 		show := addToList(ps14_hero, ps14_hero_slider)
 	}
 }
+
+[field('CType') === 'ps14_hero' || field('CType') === 'ps14_hero_slider']
+	TCEFORM.tt_content {
+		tx_foundation_variant {
+			addItems {
+				16-9 = LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:content.variant.16-9
+			}
+		}
+	}
+[END]

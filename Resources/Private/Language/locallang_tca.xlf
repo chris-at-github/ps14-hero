@@ -16,6 +16,10 @@
 			<trans-unit id="hero-slider.description">
 				<source>Hero module featuring image slider functionality</source>
 			</trans-unit>
+
+			<trans-unit id="content.variant.16-9">
+				<source>Ratio (16:9)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
