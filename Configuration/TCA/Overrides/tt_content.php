@@ -23,6 +23,14 @@
 );
 
 // ---------------------------------------------------------------------------------------------------------------------
+// FlexForm einbinden
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+	'*',
+	'FILE:EXT:ps14_hero/Configuration/FlexForms/HeroSlider.xml',
+	'ps14_hero_slider'
+);
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Modul Hero TCA anpassen
 
 // Felddefinitionen
@@ -68,7 +76,7 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['image']
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero_slider']['showitem'] = \Ps14\Site\Service\TcaService::getShowitem(
 	['general', 'appearance', 'language', 'access', 'categories', 'notes', 'extended'],
 	[
-		'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, tx_foundation_elements,'
+		'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, tx_foundation_elements, pi_flexform,'
 	]
 );
 

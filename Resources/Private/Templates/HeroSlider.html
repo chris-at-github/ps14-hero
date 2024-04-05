@@ -29,6 +29,27 @@
 						</f:for>
 					</ul>
 				</div>
+
+				<f:if condition="{flexform.settings.slider.controls} == 1 || {flexform.settings.slider.navigation} == 1">
+					<div class="slider--interface">
+						<f:if condition="{flexform.settings.slider.controls} == 1">
+							<f:debug>Slider Komponente / Controls muss noch aus Xo-Extension uebernommen werden</f:debug>
+							<f:comment>
+								<!--
+									<f:render partial="Components/Slider" section="Controls" arguments="{icons: {prev: '/assets/svg/chevron-left.svg', next: '/assets/svg/chevron-right.svg'}}" />
+								-->
+							</f:comment>
+						</f:if>
+						<f:if condition="{flexform.settings.slider.navigation} == 1">
+							<f:debug>Slider Komponente / Navigation muss noch aus Xo-Extension uebernommen werden</f:debug>
+							<f:comment>
+								<!--
+									<f:render partial="Components/Slider" section="Navigation" arguments="{elements: elements}" />
+								-->
+							</f:comment>
+						</f:if>
+					</div>
+				</f:if>
 			</f:else>
 		</f:if>
 	</f:section>

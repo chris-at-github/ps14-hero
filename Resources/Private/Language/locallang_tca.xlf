@@ -24,6 +24,16 @@
 			<trans-unit id="elements.record-type.default">
 				<source>Default</source>
 			</trans-unit>
+
+			<trans-unit id="flexform.tab.slider">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.controls">
+				<source>Display controls</source>
+			</trans-unit>
+			<trans-unit id="flexform.settings.navigation">
+				<source>Display navigation</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

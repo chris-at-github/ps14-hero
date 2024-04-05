@@ -1,0 +1,45 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<slider>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:flexform.tab.slider</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.slider.controls type="array">
+						<TCEforms>
+							<label>LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:flexform.settings.controls</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.slider.controls>
+					<settings.slider.navigation type="array">
+						<TCEforms>
+							<label>LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:flexform.settings.navigation</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.slider.navigation>
+				</el>
+			</ROOT>
+		</slider>
+	</sheets>
+</T3DataStructure>
