@@ -23,7 +23,7 @@
 );
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Modul TCA anpassen
+// Modul Hero TCA anpassen
 
 // Felddefinitionen
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['showitem'] = \Ps14\Site\Service\TcaService::getShowitem(
@@ -36,7 +36,7 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['showitem'] = \Ps14\Site\Ser
 // Bodytext mit CKEditor rendern
 $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['bodytext']['config'] = [
 	'enableRichtext' => true,
-	'richtextConfiguration' => 'ps14Default',
+	'richtextConfiguration' => 'ps14Minimal',
 ];
 
 // Videos ebenfalls zulassen
@@ -60,32 +60,39 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['image']
 		],
 	]
 );
-/*
-// ---------------------------------------------------------------------------------------------------------------------
-// Elements TCA anpassen
 
-// Definition Record
-$GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['tx_foundation_elements']['config']['overrideChildTca'] = [
+// ---------------------------------------------------------------------------------------------------------------------
+// Modul Hero Slider TCA anpassen
+
+// Felddefinitionen
+$GLOBALS['TCA']['tt_content']['types']['ps14_hero_slider']['showitem'] = \Ps14\Site\Service\TcaService::getShowitem(
+	['general', 'appearance', 'language', 'access', 'categories', 'notes', 'extended'],
+	[
+		'general' => '--palette--;;general, --palette--;;headers, --palette--;;foundation_identifier, tx_foundation_elements,'
+	]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['ps14_hero_slider']['columnsOverrides']['tx_foundation_elements']['config']['overrideChildTca'] = [
 	'columns' => [
 		'record_type' => [
 			'config' => [
 				'items' => [
 					[
 						'label' => 'LLL:EXT:ps14_hero/Resources/Private/Language/locallang_tca.xlf:elements.record-type.default',
-						'value' => 'ps14_hero_default'
+						'value' => 'ps14_hero_slider_default'
 					],
 				],
-				'default' => 'ps14_hero_default'
+				'default' => 'ps14_hero_slider_default'
 			]
 		],
 		'description' => [
 			'config' => [
-				'richtextConfiguration' => 'ps14Default'
+				'richtextConfiguration' => 'ps14Minimal'
 			]
 		]
 	],
 	'types' => [
-		'ps14_hero_default' => [
+		'ps14_hero_slider_default' => [
 			'showitem' => \Ps14\Site\Service\TcaService::getShowitem(
 				['general', 'appearance', 'access'],
 				[
@@ -97,8 +104,19 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['tx_foun
 	]
 ];
 
+$GLOBALS['TCA']['tt_content']['types']['ps14_hero_slider']['columnsOverrides']['tx_foundation_elements']['config']['overrideChildTca']['columns']['media'] = [
+	'label' => 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_tca.xlf:tt_content.media',
+	'config' => [
+		'allowed' => 'jpg, jpeg, png, svg ,mp4, ogg, flac, opus, webm',
+		'appearance' => [
+			'fileUploadAllowed' => false,
+			'createNewRelationLinkTitle' => 'LLL:EXT:ps14_foundation/Resources/Private/Language/locallang_tca.xlf:tt_content.media.add-file-reference'
+		],
+	]
+];
+
 // Anpassung Crop-Varianten fuer Elements
-$GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['tx_foundation_elements']['config']['overrideChildTca']['columns']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Ps14\Site\Service\TcaService::getCropVariants(
+$GLOBALS['TCA']['tt_content']['types']['ps14_hero_slider']['columnsOverrides']['tx_foundation_elements']['config']['overrideChildTca']['columns']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Ps14\Site\Service\TcaService::getCropVariants(
 	[
 		'default' => [
 			'allowedAspectRatios' => ['16_9'],
@@ -106,4 +124,3 @@ $GLOBALS['TCA']['tt_content']['types']['ps14_hero']['columnsOverrides']['tx_foun
 		],
 	]
 );
-*/

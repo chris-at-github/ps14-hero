@@ -20,6 +20,10 @@
 			<trans-unit id="content.variant.16-9">
 				<source>Ratio (16:9)</source>
 			</trans-unit>
+
+			<trans-unit id="elements.record-type.default">
+				<source>Default</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

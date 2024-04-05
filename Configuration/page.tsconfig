@@ -33,3 +33,9 @@ mod.wizards.newContentElement.wizardItems {
 		}
 	}
 [END]
+
+[field('CType') === 'ps14_hero_slider']
+	TCAdefaults.tt_content {
+		header_layout = 100
+	}
+[END]

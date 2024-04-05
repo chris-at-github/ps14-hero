@@ -20,6 +20,10 @@
 			<trans-unit id="content.variant.16-9">
 				<target>Verhältnis (16:9)</target>
 			</trans-unit>
+
+			<trans-unit id="elements.record-type.default">
+				<target>Default</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
