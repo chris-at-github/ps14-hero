@@ -2,6 +2,7 @@
 
 namespace Ps14\Hero\DataProcessing;
 
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -15,6 +16,12 @@ class ModuleProcessor extends \Ps14\Foundation\DataProcessing\ModuleProcessor im
 	 * @return array the processed data as key/value store
 	 */
 	public function process(ContentObjectRenderer $contentObject, array $contentObjectConfiguration, array $processorConfiguration, array $processedData) {
+
+		// Hero Slider
+		if($processedData['data']['CType'] === 'ps14_hero_slider') {
+			$this->addImportJsFiles(['/assets/js/libraries/tiny-slider.js' => ['forceOnTop' => true]]);
+		}
+
 		return parent::process($contentObject, $contentObjectConfiguration, $processorConfiguration, $processedData);
 	}
 }
