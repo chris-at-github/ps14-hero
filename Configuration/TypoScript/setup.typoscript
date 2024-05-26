@@ -21,18 +21,18 @@ tt_content {
 			40 = EXT:ps14_site/Resources/Private/Partials/
 		}
 
-#		dataProcessing {
-#			200 = Ps14\Hero\DataProcessing\ModuleProcessor
-#			200 {
-#				importCss {
-#					10 = /assets/css/modules/hero.css
-#				}
-#
-#				importJs {
-#					10 = /assets/js/modules/hero.js
-#				}
-#			}
-#		}
+		dataProcessing {
+			200 = Ps14\Hero\DataProcessing\ModuleProcessor
+			200 {
+				importCss {
+					10 = /assets/css/modules/hero.css
+				}
+
+				importJs {
+					10 = /assets/js/modules/hero.js
+				}
+			}
+		}
 	}
 
 	ps14_hero_slider < tt_content.ps14_hero
