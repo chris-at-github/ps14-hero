@@ -6,6 +6,7 @@
 			</f:then>
 			<f:else>
 				<f:render section="Image" arguments="{
+					data: data,
 					file: media,
 					settings: '{fo:settings.get(extension: \'Ps14Hero\', path: \'images\')}'
 				}" />
@@ -30,7 +31,8 @@
 			file: file,
 			sizes: settings.mediaQueries,
 			settings: settings,
-			cssClass: 'image--cover hero__media'
+			cssClass: 'image--cover hero__media',
+			lazyload: data.image_lazyload
 		}" />
 	</f:section>
 </html>
