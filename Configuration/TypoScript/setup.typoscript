@@ -50,26 +50,31 @@ tt_content {
 plugin.tx_ps14hero {
 	settings {
 		images {
-			maxWidth = 1200
+			maxWidth = 1800
 			cropVariant = desktop
 
 			mediaQueries {
 				0 {
+					maxWidth = 1800
+					cropVariant = desktop
+					mediaQuery = (min-width: 1200px)
+				}
+				1 {
 					maxWidth = 1200
 					cropVariant = desktop
 					mediaQuery = (min-width: 992px)
 				}
-				1 {
+				2 {
 					maxWidth = 992
 					cropVariant = desktop
 					mediaQuery = (min-width: 768px)
 				}
-				2 {
+				3 {
 					maxWidth = 768
 					cropVariant = mobile
 					mediaQuery = (min-width: 576px)
 				}
-				3 {
+				4 {
 					maxWidth = 576
 					cropVariant = mobile
 					mediaQuery = (min-width: 0px)
