@@ -32,6 +32,12 @@ mod.wizards.newContentElement.wizardItems {
 			}
 		}
 	}
+
+	TCAdefaults.tt_content {
+		layout = 3
+		space_before_class = none
+		space_after_class = none
+	}
 [END]
 
 [field('CType') === 'ps14_hero_slider']

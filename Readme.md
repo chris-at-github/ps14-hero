@@ -8,4 +8,4 @@ TYPO3 Extension die zwei Hero Module bereitstellt:
 - [x] Lazyloding für Hero-Media anhand der Content Position
 - [x] Ausblendung Hero-Body, falls keine Texte gepflegt sind
 - [x] Anpassung Media-Query für Layout-0 Variante
-- [ ] Anpassung Default Einstellungen (Abstand: none; Laufweite: full) über PageTs
+- [x] Anpassung Default Einstellungen (Abstand: none; Laufweite: full) über PageTs
