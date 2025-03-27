@@ -19,7 +19,7 @@ class ModuleProcessor extends \Ps14\Foundation\DataProcessing\ModuleProcessor im
 
 		// Hero Slider
 		if($processedData['data']['CType'] === 'ps14_hero_slider') {
-			$this->addImportJsFiles(['/assets/js/libraries/tiny-slider.js' => ['forceOnTop' => true]]);
+			$this->addImportJsFiles(['/assets/js/vendors/tiny-slider.js' => ['forceOnTop' => true]]);
 		}
 
 		return parent::process($contentObject, $contentObjectConfiguration, $processorConfiguration, $processedData);
